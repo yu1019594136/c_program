@@ -1,0 +1,53 @@
+在某个目录下该指令创建仓库。
+git init
+
+查看git软件版本
+git --version
+
+配置用户名和邮箱
+git config --global user.name "username"
+git config --global user.email "useremail"
+
+查看所有设置
+git config --list
+
+将git目录下的所有文件和文件夹添加到仓库
+git add .
+
+将文件添加到仓库中进行管理，或者有时候是提交修改的第一步,把要工作区的修改放到赞存区stage
+git add files
+
+查看仓库中当前状态，工作区和暂存区是否又变动
+git status
+
+查看工作区里面做了什么修改，
+git diff
+
+提交修改的第二步，把暂存区所有内容提交到当前分支，形成新版本
+git commit -m "注释"
+
+撤销工作区的修改，工作区的修改将不再被保存。
+git checkout -- filename
+
+将暂存区的修改放回工作区(unstage)
+git reset HEAD filename
+
+用于删除一个版本中的文件
+git rm filename
+
+版本回退
+git reset --hard commit_id
+
+
+
+将本地仓库和远程仓库关联
+git remote add origin git@github.com:accountname/repo_name.git
+
+第一次推送同时加上参数u，将本地master分支和远程的master分支关联起来
+git push -u origin master
+
+本地提交修改后，推送至远程仓库
+git push origin master
+
+
+
