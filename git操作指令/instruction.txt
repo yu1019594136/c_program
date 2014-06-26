@@ -15,7 +15,8 @@ git config --list
 git add .
 
 6、查看版本日志
-git log
+git log(查看提交历史，以便于回退到某个版本)
+git reflog（查看命令记录，以便于回退到未来某个版本）
 
 7、将文件添加到仓库中进行管理，或者有时候是提交修改的第一步,把要工作区的修改放到赞存区stage
 git add files
@@ -38,7 +39,7 @@ git reset HEAD filename
 13、用于删除一个版本中的文件
 git rm filename
 
-14、版本回退
+14、版本回退，可以穿梭于各种版本之间
 git reset --hard commit_id
 
 
