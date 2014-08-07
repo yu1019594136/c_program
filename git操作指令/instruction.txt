@@ -64,4 +64,8 @@ ssh git@github.com
 20、将已经关联的远程仓库的变更拉取会本地仓库，origin指定了远程仓库地址，master指定了本地仓库分支
 git pull origin master
 
+关于本地仓库和远程仓库之间的相互变更如何推送
+如果本地仓库已经从远程仓库拉取过一次，之后本地仓库进行了修改，但是修改之后发现有错误，又想回到之前从远程仓库拉取过来的时候的版本，此时如果再次尝试git pull origin master，将会提示Already up-to-date.拉取失败，此时应该运行git reflog指令，查看令记录，以便于回退到某个版本，接着运行git reset --hard commit_id来回退到之前的版本。
+
+
 关于git托管网站，GitHub和CSDN.code都提供仓库托管服务，但是首先，都需要在该网站上申请帐号以及注册邮箱，在本地创建一个文件夹作为本地仓库路径，此时如果使用GitHub托管服务，那么本地git的用户名和邮箱必须配置成和GitHub网站上一样的；如果使用csdn.code.net，那么也必须同样本地git的用户名和邮箱必须配置成和csdn.code.net网站上一样的
