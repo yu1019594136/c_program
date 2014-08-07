@@ -50,7 +50,7 @@ git remote add origin git@github.com:accountname/repo_name.git
 16、第一次推送同时加上参数u，将本地master分支和远程的master分支关联起来
 git push -u origin master
 
-17、本地提交修改后，推送至远程仓库
+17、本地提交修改后，推送至远程仓库,origin指定了远程仓库地址，master指定了本地仓库分支
 git push origin master
 
 18、将本地仓库和远程仓库进行关联，一定要在仓库目录下运行这条命令。
@@ -60,5 +60,8 @@ git remote add 远程仓库名称 git@github.com:yu1019594136/c_program.git
 
 19、测试和github的链接是否成功
 ssh git@github.com
+
+20、将已经关联的远程仓库的变更拉取会本地仓库，origin指定了远程仓库地址，master指定了本地仓库分支
+git pull origin master
 
 关于git托管网站，GitHub和CSDN.code都提供仓库托管服务，但是首先，都需要在该网站上申请帐号以及注册邮箱，在本地创建一个文件夹作为本地仓库路径，此时如果使用GitHub托管服务，那么本地git的用户名和邮箱必须配置成和GitHub网站上一样的；如果使用csdn.code.net，那么也必须同样本地git的用户名和邮箱必须配置成和csdn.code.net网站上一样的
