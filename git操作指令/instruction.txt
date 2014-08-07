@@ -56,6 +56,7 @@ git push origin master
 18、将本地仓库和远程仓库进行关联，一定要在仓库目录下运行这条命令。
 git remote add 远程仓库名称 git@github.com:yu1019594136/c_program.git
 比如：git remote add origin_c_program git@github.com:yu1019594136/c_program.git
+其中git@github.com:yu1019594136/c_program.git表示远程仓库origin_c_program的地址，也即一个仓库可以和多个不同名称（不同地址的远程仓库）进行关联。
 
 19、测试和github的链接是否成功
 ssh git@github.com
