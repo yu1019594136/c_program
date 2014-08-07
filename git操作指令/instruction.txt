@@ -59,3 +59,5 @@ git remote add 远程仓库名称 git@github.com:yu1019594136/c_program.git
 
 19、测试和github的链接是否成功
 ssh git@github.com
+
+关于git托管网站，GitHub和CSDN.code都提供仓库托管服务，但是首先，都需要在该网站上申请帐号以及注册邮箱，在本地创建一个文件夹作为本地仓库路径，此时如果使用GitHub托管服务，那么本地git的用户名和邮箱必须配置成和GitHub网站上一样的；如果使用csdn.code.net，那么也必须同样本地git的用户名和邮箱必须配置成和csdn.code.net网站上一样的
