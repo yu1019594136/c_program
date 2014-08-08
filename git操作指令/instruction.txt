@@ -92,6 +92,8 @@ git branch -D feature-test
 git branch
 指令运行后带*分支为当前HEAD指向的分支
 
+27、增加字体颜色
+git config --global color.ui true
 
 关于本地仓库和远程仓库之间的相互变更如何推送
 如果本地仓库已经从远程仓库拉取过一次，之后本地仓库进行了修改，但是修改之后发现有错误，又想回到之前从远程仓库拉取过来的时候的版本，此时如果再次尝试git pull origin master，将会提示Already up-to-date.拉取失败，此时应该运行git reflog指令，查看令记录，以便于回退到某个版本，接着运行git reset --hard commit_id来回退到之前的版本。
