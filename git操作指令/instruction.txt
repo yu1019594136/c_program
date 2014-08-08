@@ -71,8 +71,28 @@ git ls-files
 git rm --cached 文件夹名称（后面不加斜杆）
 此条命令执行之后，文件夹路径从index中删除，但文件夹仍然存在目录中，手动删除即可，用git status检查。
 
+23、创建分支
+git checkout -b branchname
+branchname指分支名称，这条指令运行后将会切换到分支上，分支从master成为当前分支branchname.
+这条指令相当于两条指令
+git branch branchname //创建分支
+git checkout branchname  //切换到某分支
+
+24、分支合并，用于合并指定分支到当前分支
+git merge branchname 
+将分支branchname合并到当前分支中，原来的branchname分支仍然存在。
+
+25、分支删除
+git branch -d branchname
+删除分支branchname，
+git branch -D feature-test
+强制删除一个还没有合并到主分支的分支
+
+26、查看仓库的所有分支
+git branch
+指令运行后带*分支为当前HEAD指向的分支
+
+
 关于本地仓库和远程仓库之间的相互变更如何推送
 如果本地仓库已经从远程仓库拉取过一次，之后本地仓库进行了修改，但是修改之后发现有错误，又想回到之前从远程仓库拉取过来的时候的版本，此时如果再次尝试git pull origin master，将会提示Already up-to-date.拉取失败，此时应该运行git reflog指令，查看令记录，以便于回退到某个版本，接着运行git reset --hard commit_id来回退到之前的版本。
 
-
-关于git托管网站，GitHub和CSDN.code都提供仓库托管服务，但是首先，都需要在该网站上申请帐号以及注册邮箱，在本地创建一个文件夹作为本地仓库路径，此时如果使用GitHub托管服务，那么本地git的用户名和邮箱必须配置成和GitHub网站上一样的；如果使用csdn.code.net，那么也必须同样本地git的用户名和邮箱必须配置成和csdn.code.net网站上一样的
